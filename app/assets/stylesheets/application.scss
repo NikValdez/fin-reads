@@ -1,0 +1,26 @@
+ @import "bootstrap";
+ @import "font-awesome";
+
+ img {
+   width: 60%;
+ }
+ .link-card {
+   display: block;
+   color: #283c46;
+   background-color: #fff;
+   box-shadow: 0 1px 2px #aa9c84;
+   border-radius: 6px;
+   padding: 1.5rem;
+   height: 100%;
+   margin: 10px;
+
+   &:hover {
+     text-decoration: none;
+     color: #283c46;
+     box-shadow: 0 5px 5px #aa9c84;
+   }
+ }
+
+body {
+  background: #f3e5f547;
+}

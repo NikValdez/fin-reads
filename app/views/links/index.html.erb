@@ -1,0 +1,28 @@
+<%= render 'layouts/navbar' %>
+<div class="container">
+  <div class="row">
+    <div class="col-md-5 offset-md-2 link-card">
+      <h2>Blogs</h2>
+      <% @blogs.each do |blog| %>
+        <%= link_to "#{blog.title}", blog.url, target: :_blank %>
+          <br>
+      <% end %>
+    </div>
+
+    <div class="col-md-5 offset-md-2 link-card">
+      <h1>Papers</h1>
+      <% @papers.each do |paper| %>
+        <%= link_to "#{paper.title}", paper.url, target: :_blank %>
+          <br>
+      <% end %>
+    </div>
+  </div>
+
+    <div class="col-md-6 offset-md-3 link-card">
+      <h1>Podcasts</h1>
+      <% @podcasts.each do |podcast| %>
+        <%= link_to "#{podcast.title}", podcast.url, target: :_blank %>
+          <br>
+      <% end %>
+  </div>
+</div>
