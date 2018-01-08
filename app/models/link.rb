@@ -28,4 +28,11 @@ class Link < ApplicationRecord
 
   end
 
+  def self.quant_feed
+    feed_urls = [
+      financial_econ = FeedParser::Parser.parse( "https://www.journals.elsevier.com/journal-of-financial-economics/rss" ).items[0],
+    ]
+
+  end
+
 end

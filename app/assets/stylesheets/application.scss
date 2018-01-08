@@ -1,18 +1,47 @@
  @import "bootstrap";
  @import "font-awesome";
+ @import "header";
 
  img {
    width: 60%;
  }
+ h2 {
+   color: #311B92;
+   text-decoration: underline;
+   font-family: 'Open Sans', sans-serif;
+   font-weight: 800;
+   margin-bottom: 1em;
+ }
+
+a {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 300;
+
+  color: #512DA8;
+  line-height: 120%;
+  &:hover {
+    font-size: 105%;
+    color: #9575CD;
+  }
+}
+
+a:link {
+  text-decoration: none;
+}
+
+
+
  .link-card {
    display: block;
    color: #283c46;
    background-color: #fff;
    box-shadow: 0 1px 2px #aa9c84;
-   border-radius: 6px;
+   float: none;
+   margin: 0 auto;
    padding: 1.5rem;
    height: 100%;
-   margin: 10px;
+   margin-bottom: 2em;
+
 
    &:hover {
      text-decoration: none;
@@ -23,4 +52,19 @@
 
 body {
   background: #f3e5f547;
+}
+
+nav {
+  margin-bottom: 2em;
+  background: #f3e5f540;
+}
+
+.published {
+  color: #BDBDBD;
+  font-size: 75%;
+}
+
+
+header {
+  margin-bottom: 3em;
 }

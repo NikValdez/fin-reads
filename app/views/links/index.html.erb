@@ -1,27 +1,39 @@
-<%= render 'layouts/navbar' %>
+<%= render 'shared/navbar' %>
+<%= render 'shared/header' %>
 <div class="container">
   <div class="row">
-    <div class="col-md-5 offset-md-2 link-card">
+    <div class="col-md-5 link-card">
       <h2>Blogs</h2>
       <% @blogs.each do |blog| %>
         <%= link_to "#{blog.title}", blog.url, target: :_blank %>
+        <div class="published"><%= blog.published.strftime("%m/%d/%Y") %><%= blog.authors[0] %></div>
           <br>
       <% end %>
     </div>
 
-    <div class="col-md-5 offset-md-2 link-card">
-      <h1>Papers</h1>
+    <div class="col-md-5 link-card">
+      <h2>Papers</h2>
       <% @papers.each do |paper| %>
         <%= link_to "#{paper.title}", paper.url, target: :_blank %>
+        <div class="published"><%= paper.published.strftime("%m/%d/%Y") %></div>
           <br>
       <% end %>
     </div>
-  </div>
 
-    <div class="col-md-6 offset-md-3 link-card">
-      <h1>Podcasts</h1>
+
+    <div class="col-md-5 link-card">
+      <h2>Podcasts</h2>
       <% @podcasts.each do |podcast| %>
         <%= link_to "#{podcast.title}", podcast.url, target: :_blank %>
+        <div class="published"><%= podcast.published.strftime("%m/%d/%Y")%></div>
+          <br>
+      <% end %>
+  </div>
+    <div class="col-md-5 link-card">
+      <h2>Quant</h2>
+      <% @quants.each do |quant| %>
+        <%= link_to "#{quant.title}", quant.url, target: :_blank %>
+        <div class="published"><%= quant.published.strftime("%m/%d/%Y") %></div>
           <br>
       <% end %>
   </div>
