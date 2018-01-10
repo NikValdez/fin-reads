@@ -4,5 +4,6 @@ class LinksController < ApplicationController
     @papers = Link.paper_feed
     @blogs = Link.blog_feed
     @quants = Link.quant_feed
+    @contact = Contact.new
   end
 end

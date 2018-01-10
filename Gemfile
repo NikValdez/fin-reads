@@ -33,6 +33,9 @@ gem "feedparser"
 gem 'bootstrap', '~> 4.0.0.beta3'
 gem 'jquery-rails'
 gem "font-awesome-rails"
+gem 'mail_form', '~> 1.5'
+gem 'simple_form', '~> 3.5'
+
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
@@ -60,5 +63,4 @@ group :development do
 end
 
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
-gem 'simple_form'
 gem 'faker'

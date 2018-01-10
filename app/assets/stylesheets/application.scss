@@ -1,6 +1,7 @@
  @import "bootstrap";
  @import "font-awesome";
  @import "header";
+ @import "contacts";
 
  img {
    width: 60%;
@@ -75,4 +76,8 @@ header {
 .btn-primary {
   background: #512DA8;
   border-color: #512DA8;
+}
+
+.hidden {
+  display: none
 }
