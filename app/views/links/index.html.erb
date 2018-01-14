@@ -6,7 +6,7 @@
       <h2>Blogs</h2>
       <% @blogs.each do |blog| %>
         <%= link_to "#{blog.title}", blog.url, target: :_blank %>
-        <div class="published"><%= blog.published.strftime("%m/%d/%Y") %><%= blog.authors[0] %></div>
+        <div class="published"><%= blog.published.strftime("%m/%d/%Y") %> | <%= blog.author %></div>
           <br>
       <% end %>
     </div>
@@ -15,7 +15,7 @@
       <h2>Papers</h2>
       <% @papers.each do |paper| %>
         <%= link_to "#{paper.title}", paper.url, target: :_blank %>
-        <div class="published"><%= paper.published.strftime("%m/%d/%Y") %></div>
+        <div class="published"><%= paper.published.strftime("%m/%d/%Y") %> | <%= paper.author %></div>
           <br>
       <% end %>
     </div>
@@ -25,7 +25,7 @@
       <h2>Podcasts</h2>
       <% @podcasts.each do |podcast| %>
         <%= link_to "#{podcast.title}", podcast.url, target: :_blank %>
-        <div class="published"><%= podcast.published.strftime("%m/%d/%Y")%></div>
+        <div class="published"><%= podcast.published.strftime("%m/%d/%Y")%> | <%= podcast.author %></div>
           <br>
       <% end %>
   </div>
@@ -33,8 +33,9 @@
       <h2>Quant</h2>
       <% @quants.each do |quant| %>
         <%= link_to "#{quant.title}", quant.url, target: :_blank %>
-        <div class="published"><%= quant.published.strftime("%m/%d/%Y") %></div>
+        <div class="published"><%= quant.published.strftime("%m/%d/%Y") %> | <%= quant.author %> </div>
           <br>
       <% end %>
   </div>
 </div>
+<%= render 'shared/footer' %>

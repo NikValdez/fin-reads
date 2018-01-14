@@ -72,6 +72,13 @@ header {
 
 #mainNav .navbar-brand {
   color: #512DA8;
+  font-family: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-weight: 900;
+  font-size: 250%;
+  &:hover {
+    color: #512DA8;
+    font-size: 265%;
+  }
 }
 .btn-primary {
   background: #512DA8;
