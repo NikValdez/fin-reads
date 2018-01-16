@@ -71,12 +71,14 @@ header {
 }
 
 #mainNav .navbar-brand {
-  color: #512DA8;
-  font-family: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  background: -webkit-linear-gradient(to right, #fbc2eb 0%, #a6c1ee 51%, #fbc2eb 100%);
+	background: linear-gradient(to right, #fbc2eb 0%, #a6c1ee 51%, #fbc2eb 100%);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+  font-family: 'Kaushan Script', 'Helvetica Neue', Helvetica, Arial, cursive;
   font-weight: 900;
   font-size: 250%;
   &:hover {
-    color: #512DA8;
     font-size: 265%;
   }
 }
