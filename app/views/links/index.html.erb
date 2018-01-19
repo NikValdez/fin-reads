@@ -15,7 +15,7 @@
       <h2>Papers</h2>
       <% @papers.each do |paper| %>
         <%= link_to "#{paper.title}", paper.url, target: :_blank %>
-        <div class="published"><%= paper.published.strftime("%m/%d/%Y") %> | <%= paper.author %></div>
+        <div class="published"><%= paper.published %> | <%= paper.author %></div>
           <br>
       <% end %>
     </div>

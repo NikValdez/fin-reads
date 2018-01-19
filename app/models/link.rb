@@ -19,19 +19,32 @@ class Link < ApplicationRecord
       alpha_architect = Feedjira::Feed.fetch_and_parse("https://alphaarchitect.com/feed/").entries[0],
       meb_faber = Feedjira::Feed.fetch_and_parse("http://mebfaber.com/feed/" ).entries[0],
     ]
-
   end
 
   def self.paper_feed
     feed_urls = [
       financial_econ = Feedjira::Feed.fetch_and_parse("https://www.journals.elsevier.com/journal-of-financial-economics/rss").entries[0],
+      quantpedia = Feedjira::Feed.fetch_and_parse("https://quantpedia.com/Blog/Feed").entries[0],
+
     ]
 
   end
 
   def self.quant_feed
     feed_urls = [
-      financial_econ = Feedjira::Feed.fetch_and_parse("https://www.journals.elsevier.com/journal-of-financial-economics/rss").entries[0],
+      j_kinlay = Feedjira::Feed.fetch_and_parse("http://jonathankinlay.com/feed/").entries[0],
+      epchan = Feedjira::Feed.fetch_and_parse("http://epchan.blogspot.com/feeds/posts/default").entries[0],
+      quantocracy = Feedjira::Feed.fetch_and_parse("http://feeds.feedburner.com/Quantocracy").entries[0],
+      robot_wealth = Feedjira::Feed.fetch_and_parse("https://robotwealth.com/blog/feed/").entries[0],
+      quant_edges = Feedjira::Feed.fetch_and_parse("http://feeds.feedburner.com/quantifiableedges/blog").entries[0],
+      mktstk = Feedjira::Feed.fetch_and_parse("https://mktstk.com/feed/").entries[0],
+      return_risk = Feedjira::Feed.fetch_and_parse("http://www.returnandrisk.com/feeds/posts/default").entries[0],
+      scotts = Feedjira::Feed.fetch_and_parse("http://www.scottsinvestments.com/feed/").entries[0],
+      qoppac = Feedjira::Feed.fetch_and_parse("https://qoppac.blogspot.com/feeds/posts/default").entries[0],
+      css = Feedjira::Feed.fetch_and_parse("https://cssanalytics.wordpress.com/feed/").entries[0],
+      trdr = Feedjira::Feed.fetch_and_parse("https://tr8dr.wordpress.com/feed/").entries[0],
+      mintegration = Feedjira::Feed.fetch_and_parse("https://mintegration.eu/feed/").entries[0],
+
     ]
 
   end
