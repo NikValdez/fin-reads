@@ -18,8 +18,6 @@ class Link < ApplicationRecord
     trillions = Feedjira::Feed.fetch_and_parse("http://feeds.megaphone.fm/BLM4711075323").entries[0],
 
   ]
-
-
   end
 
   def self.blog_feed
@@ -39,6 +37,9 @@ class Link < ApplicationRecord
       jason_zwieg = Feedjira::Feed.fetch_and_parse("http://jasonzweig.com/feed/" ).entries[0],
       abnormal_returns = Feedjira::Feed.fetch_and_parse("https://abnormalreturns.com/feed/" ).entries[0],
       investor_field_guide = Feedjira::Feed.fetch_and_parse("http://investorfieldguide.com/feed/" ).entries[0],
+      fortune = Feedjira::Feed.fetch_and_parse("http://feeds.feedburner.com/FortuneFinancialBlog" ).entries[0],
+      dollars_data = Feedjira::Feed.fetch_and_parse("https://ofdollarsanddata.com/feed" ).entries[0],
+      aqr = Feedjira::Feed.fetch_and_parse("https://www.aqr.com/cliffs-perspective/rss-feeds/commentary-rss-feed" ).entries[0],
 
     ]
   end
@@ -75,7 +76,5 @@ class Link < ApplicationRecord
       quantstrat = Feedjira::Feed.fetch_and_parse("https://quantstrattrader.wordpress.com/feed/").entries[0],
       mechanical = Feedjira::Feed.fetch_and_parse("https://mechanicalmarkets.wordpress.com/feed/").entries[0],
     ]
-
   end
-
 end
