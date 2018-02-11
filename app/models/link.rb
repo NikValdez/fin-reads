@@ -18,6 +18,7 @@ class Link < ApplicationRecord
     trillions = Feedjira::Feed.fetch_and_parse("http://feeds.megaphone.fm/BLM4711075323").entries[0],
 
   ]
+
   end
 
   def self.blog_feed

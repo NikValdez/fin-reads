@@ -36,6 +36,7 @@ gem 'jquery-rails'
 gem "font-awesome-rails"
 gem 'mail_form', '~> 1.5'
 gem 'simple_form', '~> 3.5'
+gem 'delayed_job_active_record'
 
 
 # Use Capistrano for deployment
