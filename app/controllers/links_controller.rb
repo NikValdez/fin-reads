@@ -1,9 +1,9 @@
 class LinksController < ApplicationController
   def index
-    @podcasts = Link.pcast_feed
-    @papers = Link.paper_feed
-    @blogs = Link.blog_feed
-    @quants = Link.quant_feed
+    @podcasts = PcastFeed.all
+    @papers = PaperFeed.all
+    @blogs = BlogFeed.all
+    @quants = QuantFeed.all
     @contact = Contact.new
   end
 end

@@ -5,8 +5,8 @@
     <div class="col-md-5 link-card">
       <h2>Blogs</h2>
       <% @blogs.first(5).each do |blog| %>
-        <%= link_to "#{blog.title}", blog.url, target: :_blank %>
-        <div class="published"><%= blog.published.strftime("%m/%d/%Y") %> | <%= blog.author %></div>
+        <%= link_to "#{blog.name}", blog.url, target: :_blank %>
+        <div class="published"><%= blog.published_at.strftime("%m/%d/%Y") %> | <%= blog.author %>  </div>
           <br>
       <% end %>
     </div>
@@ -14,8 +14,12 @@
     <div class="col-md-5 link-card">
       <h2>Papers</h2>
       <% @papers.first(5).each do |paper| %>
-        <%= link_to "#{paper.title}", paper.url, target: :_blank %>
-        <div class="published"><%= paper.published %> | <%= paper.author %></div>
+        <%= link_to "#{paper.name}", paper.url, target: :_blank %>
+        <% if paper.published_at? %>
+        <div class="published"><%= paper.published_at.strftime("%m/%d/%Y") %> | <%= paper.author %>  </div>
+        <% else %>
+        <p class="published">No Date</p>
+        <% end %>
           <br>
       <% end %>
     </div>
@@ -23,16 +27,16 @@
     <div class="col-md-5 link-card">
       <h2>Podcasts</h2>
       <% @podcasts.first(5).each do |podcast| %>
-        <%= link_to "#{podcast.title}", podcast.url, target: :_blank %>
-        <div class="published"><%= podcast.published.strftime("%m/%d/%Y")%> | <%= podcast.author %></div>
+        <%= link_to "#{podcast.name}", podcast.url, target: :_blank %>
+        <div class="published"><%= podcast.published_at.strftime("%m/%d/%Y")%> | <%= podcast.author %> </div>
           <br>
       <% end %>
   </div>
     <div class="col-md-5 link-card">
       <h2>Quant</h2>
       <% @quants.first(5).each do |quant| %>
-        <%= link_to "#{quant.title}", quant.url, target: :_blank %>
-        <div class="published"><%= quant.published.strftime("%m/%d/%Y") %> | <%= quant.author %> </div>
+        <%= link_to "#{quant.name}", quant.url, target: :_blank %>
+        <div class="published"><%= quant.published_at.strftime("%m/%d/%Y") %> | <%= quant.author %> </div>
           <br>
       <% end %>
   </div>

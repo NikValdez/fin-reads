@@ -10,10 +10,21 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180210115308) do
+ActiveRecord::Schema.define(version: 20180219091758) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "blog_feeds", force: :cascade do |t|
+    t.string "name"
+    t.text "summary"
+    t.string "url"
+    t.datetime "published_at"
+    t.string "guid"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string "author"
+  end
 
   create_table "delayed_jobs", force: :cascade do |t|
     t.integer "priority", default: 0, null: false
@@ -33,6 +44,39 @@ ActiveRecord::Schema.define(version: 20180210115308) do
   create_table "links", force: :cascade do |t|
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "paper_feeds", force: :cascade do |t|
+    t.string "name"
+    t.text "summary"
+    t.string "url"
+    t.datetime "published_at"
+    t.string "guid"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string "author"
+  end
+
+  create_table "pcast_feeds", force: :cascade do |t|
+    t.string "name"
+    t.text "summary"
+    t.string "url"
+    t.datetime "published_at"
+    t.string "guid"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string "author"
+  end
+
+  create_table "quant_feeds", force: :cascade do |t|
+    t.string "name"
+    t.text "summary"
+    t.string "url"
+    t.datetime "published_at"
+    t.string "guid"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string "author"
   end
 
 end
