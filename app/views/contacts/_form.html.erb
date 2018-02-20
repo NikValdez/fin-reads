@@ -4,10 +4,8 @@
       <div class="modal-header">
         <%= image_tag "nikcochran.png", class: "profile-image" %>
         <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-        <h3 id="myModalLabel"></h3>
       </div>
       <div class="modal-body">
-        <form class="form-horizontal col-sm-12">
           <h2>Say Hello</h2>
           		<%= form_for @contact do |f| %>
           				<%= f.label :name, class: 'contact_name' %><br>
@@ -34,7 +32,6 @@
           		  			<%= button_tag 'Send Message', class: "button", data: {disable_with: "<i class='fa fa-spinner fa-spin'></i> Sending email..."} %>
           		  		</div>
           		 <% end %>
-        </form>
       </div>
       <div class="modal-footer">
         <button class="button button-2" data-dismiss="modal" aria-hidden="true">Cancel</button>
