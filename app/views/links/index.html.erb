@@ -4,41 +4,45 @@
   <div class="row">
     <div class="col-md-5 link-card">
       <h2>Blogs</h2>
-      <% @blogs.first(5).each do |blog| %>
-        <%= link_to "#{blog.name}", blog.url, target: :_blank %>
-        <div class="published"><%= blog.published_at.strftime("%m/%d/%Y") %> | <%= blog.author %>  </div>
+      <% @blogs.first(10).each do |blog| %>
+        <div class="blog-link"><%= link_to "#{blog.name}", blog.url, target: :_blank %></div>
+        <div class="published blog-link"><%= blog.published_at.strftime("%m/%d/%Y") %> | <%= blog.author %>  </div>
           <br>
       <% end %>
-    </div>
-
-    <div class="col-md-5 link-card">
-      <h2>Papers</h2>
-      <% @papers.first(5).each do |paper| %>
-        <%= link_to "#{paper.name}", paper.url, target: :_blank %>
-        <% if paper.published_at? %>
-        <div class="published"><%= paper.published_at.strftime("%m/%d/%Y") %> | <%= paper.author %>  </div>
-        <% else %>
-        <p class="published">No Date</p>
-        <% end %>
-          <br>
-      <% end %>
+        <button type="button", id="show-more-blog">Show More</button>
     </div>
 
     <div class="col-md-5 link-card">
       <h2>Podcasts</h2>
-      <% @podcasts.first(5).each do |podcast| %>
-        <%= link_to "#{podcast.name}", podcast.url, target: :_blank %>
-        <div class="published"><%= podcast.published_at.strftime("%m/%d/%Y")%> | <%= podcast.author %> </div>
+      <% @podcasts.first(10).each do |podcast| %>
+        <div class="podcast-link"><%= link_to "#{podcast.name}", podcast.url, target: :_blank %></div>
+        <div class="published podcast-link"><%= podcast.published_at.strftime("%m/%d/%Y")%> | <%= podcast.author %> </div>
           <br>
       <% end %>
+      <button type="button", id="show-more-podcast">Show More</button>
   </div>
     <div class="col-md-5 link-card">
       <h2>Quant</h2>
-      <% @quants.first(5).each do |quant| %>
-        <%= link_to "#{quant.name}", quant.url, target: :_blank %>
-        <div class="published"><%= quant.published_at.strftime("%m/%d/%Y") %> | <%= quant.author %> </div>
+      <% @quants.first(10).each do |quant| %>
+        <div class="quant-link"><%= link_to "#{quant.name}", quant.url, target: :_blank %></div>
+        <div class="published quant-link"><%= quant.published_at.strftime("%m/%d/%Y") %> | <%= quant.author %> </div>
           <br>
       <% end %>
+      <button type="button", id="show-more-quant">Show More</button>
+  </div>
+  
+  <div class="col-md-5 link-card">
+    <h2>Papers</h2>
+    <% @papers.first(10).each do |paper| %>
+      <div class="paper-link"><%= link_to "#{paper.name}", paper.url, target: :_blank %></div>
+      <% if paper.published_at? %>
+      <div class="published paper-link"><%= paper.published_at.strftime("%m/%d/%Y") %> | <%= paper.author %>  </div>
+      <% else %>
+      <p class="published">No Date</p>
+      <% end %>
+        <br>
+    <% end %>
+    <button type="button", id="show-more-paper">Show More</button>
   </div>
 </div>
 
