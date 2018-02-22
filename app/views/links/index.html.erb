@@ -6,7 +6,9 @@
       <h2>Blogs</h2>
       <% @blogs.first(10).each do |blog| %>
         <div class="blog-link"><%= link_to "#{blog.name}", blog.url, target: :_blank %></div>
-        <div class="published blog-link"><%= blog.published_at.strftime("%m/%d/%Y") %> | <%= blog.author %>  </div>
+        <div class="published blog-link"><%= blog.published_at.strftime("%m/%d/%Y") %> | <%= blog.author %>
+          <span class="blog-summary" data-toggle="popover" data-placement="right" title="Summary" data-content="<%= strip_tags(blog.summary) %>">| Summary</span>
+        </div>
           <br>
       <% end %>
         <button type="button", id="show-more-blog">Show More</button>
@@ -16,7 +18,9 @@
       <h2>Podcasts</h2>
       <% @podcasts.first(10).each do |podcast| %>
         <div class="podcast-link"><%= link_to "#{podcast.name}", podcast.url, target: :_blank %></div>
-        <div class="published podcast-link"><%= podcast.published_at.strftime("%m/%d/%Y")%> | <%= podcast.author %> </div>
+        <div class="published podcast-link"><%= podcast.published_at.strftime("%m/%d/%Y")%> | <%= podcast.author %>
+          <span class="podcast-summary" data-toggle="popover" data-placement="left" title="Summary" data-content="<%= strip_tags(podcast.summary.truncate(350)) %>">| Summary</span>
+        </div>
           <br>
       <% end %>
       <button type="button", id="show-more-podcast">Show More</button>
@@ -25,20 +29,25 @@
       <h2>Quant</h2>
       <% @quants.first(10).each do |quant| %>
         <div class="quant-link"><%= link_to "#{quant.name}", quant.url, target: :_blank %></div>
-        <div class="published quant-link"><%= quant.published_at.strftime("%m/%d/%Y") %> | <%= quant.author %> </div>
+        <div class="published quant-link"><%= quant.published_at.strftime("%m/%d/%Y") %> | <%= quant.author %>
+          <span class="quant-summary" data-toggle="popover" data-placement="right" title="Summary" data-content="<%= strip_tags(quant.summary) %>">| Summary</span>
+        </div>
           <br>
       <% end %>
       <button type="button", id="show-more-quant">Show More</button>
   </div>
-  
+
   <div class="col-md-5 link-card">
     <h2>Papers</h2>
     <% @papers.first(10).each do |paper| %>
       <div class="paper-link"><%= link_to "#{paper.name}", paper.url, target: :_blank %></div>
       <% if paper.published_at? %>
-      <div class="published paper-link"><%= paper.published_at.strftime("%m/%d/%Y") %> | <%= paper.author %>  </div>
+      <div class="published paper-link"><%= paper.published_at.strftime("%m/%d/%Y") %> | <%= paper.author %>
+        <span class="paper-summary" data-toggle="popover" data-placement="left" title="Summary" data-content="<%= strip_tags(paper.summary) %>">| Summary</span>
+      </div>
       <% else %>
-      <p class="published">No Date</p>
+      <p class="published">No Date |<span class="paper-summary" data-toggle="popover" data-placement="left" title="Summary" data-content="<%= strip_tags(paper.summary) %>">| Summary</span>
+</p>
       <% end %>
         <br>
     <% end %>
