@@ -8,6 +8,7 @@
         <div class="blog-link"><%= link_to "#{blog.name}", blog.url, target: :_blank %></div>
         <div class="published blog-link"><%= blog.published_at.strftime("%m/%d/%Y") %> | <%= blog.author %>
           <span class="blog-summary" data-toggle="popover" data-placement="right" title="Summary" data-content="<%= strip_tags(blog.summary) %>">| Summary</span>
+          <div class="image"><%= blog.image %></div>
         </div>
           <br>
       <% end %>
