@@ -30,7 +30,7 @@ class BlogFeed < ApplicationRecord
           summary:      entry.summary,
           url:          entry.url,
           author:       entry.author,
-          published_at: entry.published
+          published_at: entry.published,
           guid:         entry.id
         )
       end
