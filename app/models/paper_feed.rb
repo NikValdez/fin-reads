@@ -9,8 +9,9 @@ class PaperFeed < ApplicationRecord
       cfa_lit = Feedjira::Feed.fetch_and_parse("https://www.cfapubs.org/action/showFeed?ui=0&mi=3bydyv&ai=12u&jc=rflr&type=etoc&feed=rss").entries[0],
       cfa_mag = Feedjira::Feed.fetch_and_parse("https://www.cfapubs.org/action/showFeed?ui=0&mi=3bdplw&ai=sz&jc=cfm&type=etoc&feed=rss").entries[0],
       journal_of_finance = Feedjira::Feed.fetch_and_parse("http://journal.afajof.org/issue-archive/feed/").entries[0],
-    ]
+      quant_news_papers = Feedjira::Feed.fetch_and_parse("http://www.quantnews.com/feed_type/ssrn/feed/").entries[0..9],
 
+    ]
 
   feed_urls.each do |entry|
       unless exists? guid:  entry.id
