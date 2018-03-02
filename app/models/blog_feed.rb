@@ -18,7 +18,6 @@ class BlogFeed < ApplicationRecord
       investor_field_guide = Feedjira::Feed.fetch_and_parse("http://investorfieldguide.com/feed/" ).entries[0],
       fortune = Feedjira::Feed.fetch_and_parse("http://feeds.feedburner.com/FortuneFinancialBlog" ).entries[0],
       dollars_data = Feedjira::Feed.fetch_and_parse("https://ofdollarsanddata.com/feed" ).entries[0],
-      aqr = Feedjira::Feed.fetch_and_parse("https://www.aqr.com/cliffs-perspective/rss-feeds/commentary-rss-feed" ).entries[0],
       dan_egan = Feedjira::Feed.fetch_and_parse("http://www.dpegan.com/feed/" ).entries[0],
       intrinsic_investing = Feedjira::Feed.fetch_and_parse("https://intrinsicinvesting.com/feed/" ).entries[0],
     ]
