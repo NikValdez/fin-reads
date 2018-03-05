@@ -21,7 +21,11 @@ class QuantFeed < ApplicationRecord
       peterwerner = Feedjira::Feed.fetch_and_parse("http://petewerner.blogspot.com/feeds/posts/default").entries[0],
       quantstrat = Feedjira::Feed.fetch_and_parse("https://quantstrattrader.wordpress.com/feed/").entries[0],
       mechanical = Feedjira::Feed.fetch_and_parse("https://mechanicalmarkets.wordpress.com/feed/").entries[0],
+      wilmot = Feedjira::Feed.fetch_and_parse("https://www.wilmott.com/feed/").entries[0],
+
     ]
+
+
 
   feed_urls.each do |entry|
       unless exists? guid:  entry.id
