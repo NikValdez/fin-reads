@@ -44,10 +44,10 @@
       <div class="paper-link"><%= link_to "#{paper.name}", paper.url, target: :_blank %></div>
       <% if paper.published_at? %>
       <div class="published paper-link"><%= verbose_date(paper.published_at) %> | <%= paper.author %>
-        <span class="paper-summary" data-toggle="popover" data-placement="left" title="Preview" data-content="<%= strip_tags(paper.summary) %>">| Preview</span>
+        <span class="paper-summary" data-toggle="popover" data-placement="left" title="Preview" data-content="<%= strip_tags(paper.summary.truncate(350)) %>">| Preview</span>
       </div>
       <% else %>
-      <p class="published">No Date |<span class="paper-summary" data-toggle="popover" data-placement="left" title="Preview" data-content="<%= strip_tags(paper.summary) %>">| Preview</span>
+      <p class="published"><%= now_date %> |<span class="paper-summary" data-toggle="popover" data-placement="left" title="Preview" data-content="<%= strip_tags(paper.summary.truncate(350)) %>">| Preview</span>
 </p>
       <% end %>
         <br>
