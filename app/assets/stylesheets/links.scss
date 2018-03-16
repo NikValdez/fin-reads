@@ -6,9 +6,10 @@
   border: 1px dashed #512DA8;
   padding: 7px;
   height: 60px;
-  background: #fff;
   &:hover {
     box-shadow: 8px 10px 20px 0px rgba(46,61,73,0.15);
+    background: #512DA8;
+    color: #fff;
   }
 }
 
