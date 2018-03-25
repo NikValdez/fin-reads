@@ -20,6 +20,9 @@ class BlogFeed < ApplicationRecord
       dollars_data = Feedjira::Feed.fetch_and_parse("https://ofdollarsanddata.com/feed" ).entries[0],
       dan_egan = Feedjira::Feed.fetch_and_parse("http://www.dpegan.com/feed/" ).entries[0],
       intrinsic_investing = Feedjira::Feed.fetch_and_parse("https://intrinsicinvesting.com/feed/" ).entries[0],
+      yardeni = Feedjira::Feed.fetch_and_parse("http://blog.yardeni.com/feeds/posts/default" ).entries[0],
+      newfoundBlog = Feedjira::Feed.fetch_and_parse("https://blog.thinknewfound.com/feed/").entries[0],
+      twentyFiveIq = Feedjira::Feed.fetch_and_parse("https://25iq.com/feed/").entries[0],
     ]
 
     feed_urls.each do |entry|
